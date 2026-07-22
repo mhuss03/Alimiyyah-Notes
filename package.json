@@ -1,8 +1,8 @@
 {
   "name": "quduri-study",
+  "homepage": "https://mhuss03.github.io/Alimiyyah-Notes",
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://mhuss03.github.io/Alimiyyah-Notes/",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

@@ -1,6 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 import { Navbar } from "./components/Navbar";
-import { HomePage } from "./pages/HomePage";
+import { LandingPage } from "./pages/LandingPage";
+import { AlimiyyahNotesPage } from "./pages/AlimiyyahNotesPage";
+import { QuduriBooksPage } from "./pages/QuduriBooksPage";
 import { ChapterPage } from "./pages/ChapterPage";
 import styles from "./App.module.css";
 
@@ -10,16 +12,20 @@ export default function App() {
       <Navbar />
       <main className={styles.main}>
         <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/chapter/:id" element={<ChapterPage />} />
-          <Route path="*" element={<HomePage />} />
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/:sectionId" element={<AlimiyyahNotesPage />} />
+          <Route path="/:sectionId/:bookId" element={<QuduriBooksPage />} />
+          <Route
+            path="/:sectionId/:bookId/chapter/:id"
+            element={<ChapterPage />}
+          />
+          <Route path="*" element={<LandingPage />} />
         </Routes>
       </main>
       <footer className={styles.footer}>
         <p>
-          Mukhtaṣar al-Qudūrī &nbsp;·&nbsp;
-          <span>Ḥanafī Fiqh</span> &nbsp;·&nbsp; Study Notes &nbsp;·&nbsp;
-          Chapters on Commercial Transactions
+          Alimiyyah Notes &nbsp;·&nbsp;
+          <span>Islamic Jurisprudence</span> &nbsp;·&nbsp; Study Resources
         </p>
       </footer>
     </div>
