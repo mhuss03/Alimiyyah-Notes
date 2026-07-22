@@ -1,0 +1,16 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting…</title>
+    <script>
+      const path = window.location.pathname.replace(/\/+$/, "");
+      const redirectPath =
+        path === "" ? "/Alimiyyah-Notes/" : "/Alimiyyah-Notes/#" + path;
+      window.location.replace(redirectPath);
+    </script>
+  </head>
+  <body>
+    Redirecting…
+  </body>
+</html>
